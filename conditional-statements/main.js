@@ -51,7 +51,7 @@
 // console.log("the Club is fully booked");
 // }
 
-// excercise 5
+// // excercise 5
 const a = 3
 let b = 2
 let c = 0 || 12
@@ -71,22 +71,43 @@ b += 2; // b =15
 console.log(a+" "+b+" "+c+" "+d);
 
 
-// Excercise 6
+// // Excercise 6
 
 
-const gender = "female";
-let profession = "business";
+// const gender = "female";
+// let profession = "business";
 
-if (gender=="male") {
-    profession+="man";
+// if (gender=="male") {
+//     profession+="man";
     
-}else if (gender =="female") {
-    profession+="woman";
+// }else if (gender =="female") {
+//     profession+="woman";
+// }else{
+//     profession+="person";
+// }
+
+
+// console.log(profession);
+
+
+//Excercise 7
+
+let boughtTesla = true;
+const yearOfTeslaPurchase = 2019;
+let isUSCitizen = false;
+let currentYear = new Date().getFullYear();
+
+
+if (boughtTesla) {
+if(isUSCitizen){
+if((currentYear-yearOfTeslaPurchase)>=4){
+console.log("would you like an upgrade?");
 }else{
-    profession+="person";
+console.log("Are you satisfied with your Tesla?");
 }
-
-
-console.log(profession);
-
-
+}else{
+    console.log("would you like to move to the US?");
+}
+}else{
+    console.log("Are you iterested in buying a Tesla Car?");
+}
