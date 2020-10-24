@@ -21,19 +21,32 @@
 // console.log("all good");
 // }
 
-// Excerices 3
+// // Excerices 3
 
-let performance = "stellar"
-let salary = 10000
-const goodBonus = 1000
-const stellarBonus = 3000
+// let performance = "stellar"
+// let salary = 10000
+// const goodBonus = 1000
+// const stellarBonus = 3000
 
-if (performance == "stellar"){
+// if (performance == "stellar"){
 
 
-    salary+=stellarBonus;
+//     salary+=stellarBonus;
+// }else{
+
+//     salary+=goodBonus;
+// }
+// console.log("Your new salary is:"+salary);
+
+// Excercise 4
+
+const isVip = false;
+let cash = 300;
+
+if ( isVip || cash>300) {
+ 
+    console.log("Welcome to the Club");
 }else{
 
-    salary+=goodBonus;
+console.log("the Club is fully booked");
 }
-console.log("Your new salary is:"+salary);
