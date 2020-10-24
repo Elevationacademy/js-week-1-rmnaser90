@@ -38,15 +38,55 @@
 // }
 // console.log("Your new salary is:"+salary);
 
-// Excercise 4
+// // Excercise 4
 
-const isVip = false;
-let cash = 300;
+// const isVip = false;
+// let cash = 300;
 
-if ( isVip || cash>300) {
+// if ( isVip || cash>300) {
  
-    console.log("Welcome to the Club");
-}else{
+//     console.log("Welcome to the Club");
+// }else{
 
-console.log("the Club is fully booked");
+// console.log("the Club is fully booked");
+// }
+
+// excercise 5
+const a = 3
+let b = 2
+let c = 0 || 12
+let d
+console.log(a+" "+b+" "+c+" "+d);
+b = c  //b=12
+b++    // b=13
+if(d){   // d undefined
+  b = a
 }
+
+d = a + (b * c)  //  3+ (13*12)=159
+d++  // d= 160
+b += 2; // b =15
+
+  // 3  15  12   160
+console.log(a+" "+b+" "+c+" "+d);
+
+
+// Excercise 6
+
+
+const gender = "female";
+let profession = "business";
+
+if (gender=="male") {
+    profession+="man";
+    
+}else if (gender =="female") {
+    profession+="woman";
+}else{
+    profession+="person";
+}
+
+
+console.log(profession);
+
+
