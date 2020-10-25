@@ -86,26 +86,52 @@
 // myList.push(...library.books)
 // console.log(myList);
 
-const reservations = {
-    bob: { claimed: false },
-    ted: { claimed: true }
-  }
-  
-  let name = prompt('Please enter the name for your reservation').toLowerCase();
+//Extensions
 
-if(reservations[name]){
-    if (!reservations[name].claimed) {
-    console.log("welcome, "+name);
-    reservations[name].claimed= true;
-    }else{
-        console.log("someone claimed you reservation");
+const date = 3
+let message = ''
+const kitchen = {
+    owner: "Geraldine",
+    hasOven: true, // choose one
+    fridge: {
+        price: 780,
+        works: true, // choose one
+        items: [{
+                name: "cheese",
+                expiryDate: 7
+            },
+            {
+                name: "raddish",
+                expiryDate: 1
+            },
+            {
+                name: "bread",
+                expiryDate: 1
+            }
+        ]
+    }
+}
+let fridgeWorks=kitchen.fridge.works;
+let expiresIn = date - (kitchen.fridge.items[1].expiryDate);
+if (expiresIn >= 1) {
+    message += "Geraldine's " + kitchen.fridge.items[1].name + " expired " + expiresIn + (expiresIn == 1 ? " day ago. " : " days ago. ");
+
+    if (fridgeWorks) {
+        message += "Weird, considering her fridge works. "
+    } else {
+        message += "Probably because her fridge doesn't work. "
+    }
+    if (kitchen.hasOven) {
+        message += "Luckily, she has an oven to cook the " + kitchen.fridge.items[1].name + " in."
+    } else {
+        message += "Too bad she doesn't have an oven to cook the " + kitchen.fridge.items[1].name + " in."
+    }
+    if (!fridgeWorks) {
+
+        message += " And she'll have to pay " + kitchen.fridge.price/2 + " to fix the fridge.";
     }
 
-
-}else{
-
-    console.log("there's no reservation under the name "+name);
-
-    reservations[name]={claimed: true}
-    console.log(reservations);
 }
+
+
+console.log(message);
