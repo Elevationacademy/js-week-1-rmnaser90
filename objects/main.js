@@ -87,15 +87,16 @@
 // console.log(myList);
 
 const reservations = {
-    Bob: { claimed: false },
-    Ted: { claimed: true }
+    bob: { claimed: false },
+    ted: { claimed: true }
   }
   
-  const name = prompt('Please enter the name for your reservation');
+  let name = prompt('Please enter the name for your reservation').toLowerCase();
 
 if(reservations[name]){
     if (!reservations[name].claimed) {
     console.log("welcome, "+name);
+    reservations[name].claimed= true;
     }else{
         console.log("someone claimed you reservation");
     }
@@ -104,4 +105,7 @@ if(reservations[name]){
 }else{
 
     console.log("there's no reservation under the name "+name);
+
+    reservations[name]={claimed: true}
+    console.log(reservations);
 }
