@@ -23,7 +23,7 @@
 
 // }
 
-//Excecise 2 & 3
+//Excecise 2 & 3 & 4
 
 let myList=[
     {
@@ -63,3 +63,22 @@ let mySecondList=[
 
     myList.push(...mySecondList);
     console.log(myList);
+
+const library={
+                books:  [{
+                            title: 'the future of the mind',
+                            author:'Michio Kaku'
+
+                },
+                {
+                    title: 'Physics of the future',
+                    author:'Michio Kaku'
+
+        }
+
+                    ]
+
+};
+
+myList.push(...library.books)
+console.log(myList);
