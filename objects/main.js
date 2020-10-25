@@ -23,7 +23,7 @@
 
 // }
 
-//Excecise 2
+//Excecise 2 & 3
 
 let myList=[
     {
@@ -46,3 +46,20 @@ console.log(myList[0].age);
 myList.splice(1,1);
 
 console.log(myList);
+
+
+let mySecondList=[
+    {
+        name: 'Barbara',
+        age: 25,
+        city:'Lebanon'
+    },
+    {
+        name: 'David',
+        age: 34,
+        city:'Tel aviv'
+
+    }];
+
+    myList.push(...mySecondList);
+    console.log(myList);
