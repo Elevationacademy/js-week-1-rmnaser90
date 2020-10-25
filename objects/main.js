@@ -23,62 +23,85 @@
 
 // }
 
-//Excecise 2 & 3 & 4
+// //Excecise 2 & 3 & 4
 
-let myList=[
-    {
-        name: 'Rami',
-        age: 30,
-        city:'Jerusalem'
-    },
-    {
-        name: 'Ahmad',
-        age: 28,
-        city:'Jerusalem'
+// let myList=[
+//     {
+//         name: 'Rami',
+//         age: 30,
+//         city:'Jerusalem'
+//     },
+//     {
+//         name: 'Ahmad',
+//         age: 28,
+//         city:'Jerusalem'
 
-    }];
-    console.log(myList[0].age);
+//     }];
+//     console.log(myList[0].age);
 
-    myList[0].age=32;
+//     myList[0].age=32;
 
-console.log(myList[0].age);
+// console.log(myList[0].age);
 
-myList.splice(1,1);
+// myList.splice(1,1);
 
-console.log(myList);
+// console.log(myList);
+
+// // excercise 3
+// let mySecondList=[
+//     {
+//         name: 'Barbara',
+//         age: 25,
+//         city:'Lebanon'
+//     },
+//     {
+//         name: 'David',
+//         age: 34,
+//         city:'Tel aviv'
+
+//     }];
+
+//     myList.push(...mySecondList);
+//     console.log(myList);
 
 
-let mySecondList=[
-    {
-        name: 'Barbara',
-        age: 25,
-        city:'Lebanon'
-    },
-    {
-        name: 'David',
-        age: 34,
-        city:'Tel aviv'
+// // Excercise 4
 
-    }];
+// const library={
+//                 books:  [{
+//                             title: 'the future of the mind',
+//                             author:'Michio Kaku'
 
-    myList.push(...mySecondList);
-    console.log(myList);
+//                 },
+//                 {
+//                     title: 'Physics of the future',
+//                     author:'Michio Kaku'
 
-const library={
-                books:  [{
-                            title: 'the future of the mind',
-                            author:'Michio Kaku'
+//         }
 
-                },
-                {
-                    title: 'Physics of the future',
-                    author:'Michio Kaku'
+//                     ]
 
-        }
+// };
 
-                    ]
+// myList.push(...library.books)
+// console.log(myList);
 
-};
+const reservations = {
+    Bob: { claimed: false },
+    Ted: { claimed: true }
+  }
+  
+  const name = prompt('Please enter the name for your reservation');
 
-myList.push(...library.books)
-console.log(myList);
+if(reservations[name]){
+    if (!reservations[name].claimed) {
+    console.log("welcome, "+name);
+    }else{
+        console.log("someone claimed you reservation");
+    }
+
+
+}else{
+
+    console.log("there's no reservation under the name "+name);
+}
