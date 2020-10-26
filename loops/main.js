@@ -55,7 +55,7 @@
 //     }
 // }
 
-// Exercise 7
+// Exercise 7 & 8
 
 const names = ["Ashley", "Donovan", "Lucas"]
 const ages = [23, 47, 18]
@@ -68,3 +68,7 @@ for (let i = 0; i < names.length; i++) {
 }
 
 console.log(people);
+
+for (let person of people) {
+    console.log(person.name+" is "+person.age+" years old.");
+}
