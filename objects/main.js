@@ -86,6 +86,23 @@
 // myList.push(...library.books)
 // console.log(myList);
 
+
+// // Excercise 5 5.1 5.2
+
+// const reservations = {
+//     bob: { claimed: false },
+//     ted: { claimed: true }
+//   }
+
+//   let name = prompt('Please enter the name for your reservation').toLowerCase();
+
+// if(reservations[name]){
+//     if (!reservations[name].claimed) {
+//     console.log("welcome, "+name);
+//     reservations[name].claimed= true;
+//     }else{
+//         console.log("someone claimed you reservation");
+
 //Extensions
 
 const date = 3
