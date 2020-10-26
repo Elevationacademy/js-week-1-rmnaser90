@@ -25,10 +25,22 @@
 
 // EXercise 4 
 
-let num=[]
+let nums=[]
 
 for(let i=0;i<100;i++){
 
-    num[i]=i+1;
+    nums[i]=i+1;
 }
-console.log(num);
+console.log(nums);
+
+
+//Exercise 5
+
+for (let num of nums) {
+    
+    if (num%2) {
+        console.log(num);
+    }
+}
+
+
