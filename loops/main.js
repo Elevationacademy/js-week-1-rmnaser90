@@ -73,22 +73,73 @@
 //     console.log(person.name+" is "+person.age+" years old.");
 // }
 
-// Exercise 9
+// // Exercise 9
 
-const posts = [
-    {id: 165234, text: "Love this product"},
-    {id: 2762834, text: "This is the worst. DON'T BUY!"},
-    {id: 3982349, text: "So glad I found this. Bought four already!"}
+// const posts = [
+//     {id: 165234, text: "Love this product"},
+//     {id: 2762834, text: "This is the worst. DON'T BUY!"},
+//     {id: 3982349, text: "So glad I found this. Bought four already!"}
+//   ]
+// console.log(posts);
+
+//   let deletePostByID=prompt('eneter the Id of post to deleted')
+//   let i=0
+//   for (const post of posts) {
+
+//     if (post.id == deletePostByID){
+
+//         posts.splice(i,1);
+//     }
+      
+
+//     i++;
+//   }
+
+//   console.log(posts);
+
+
+
+
+
+
+  // Exercise 10
+  const posts = [
+    {
+      id: 1, 
+      text: "Love this product",
+      comments: []
+    },
+    { 
+      id: 2, 
+      text: "This is the worst. DON'T BUY!", 
+      comments: [
+                  {id: 1, text: "Idiot has no idea"}, 
+                  {id: 2, text:"Fool!"}, 
+                  {id: 3, text: "I agree!"}
+                ]
+     },
+     {
+      id: 3, 
+      text: "So glad I found this. Bought four already!",
+      comments: []
+     }
   ]
-console.log(posts);
-
-  let deletePostByID=prompt('eneter the Id of post to deleted')
+  
+  let getPostByID= 2
+  let deleteCommentById=2;
   let i=0
   for (const post of posts) {
 
-    if (post.id == deletePostByID){
+    if (post.id == getPostByID){
+            let j=0
+       for (const comment of post.comments) {
+           if (comment.id == deleteCommentById) {
 
-        posts.splice(i,1);
+            post.comments.splice(j,1);
+               
+           }
+           j++;
+       }
     }
       
 
