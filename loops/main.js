@@ -9,11 +9,14 @@
     
 // }
 
-// Exercise 2
+// Exercise 2 & 3
 let sum =0;
 let myArray=[1,4,2,65,34,21,8,9];
+let average=0
 
 for (const i in myArray) {
     sum+=myArray[i];
 }
-console.log(sum);
+average=sum / myArray.length;
+console.log("sum: "+sum);
+console.log("average: "+average);
