@@ -102,48 +102,71 @@
 
 
 
-  // Exercise 10
-  const posts = [
-    {
-      id: 1, 
-      text: "Love this product",
-      comments: []
-    },
-    { 
-      id: 2, 
-      text: "This is the worst. DON'T BUY!", 
-      comments: [
-                  {id: 1, text: "Idiot has no idea"}, 
-                  {id: 2, text:"Fool!"}, 
-                  {id: 3, text: "I agree!"}
-                ]
-     },
-     {
-      id: 3, 
-      text: "So glad I found this. Bought four already!",
-      comments: []
-     }
-  ]
+//   // Exercise 10
+//   const posts = [
+//     {
+//       id: 1, 
+//       text: "Love this product",
+//       comments: []
+//     },
+//     { 
+//       id: 2, 
+//       text: "This is the worst. DON'T BUY!", 
+//       comments: [
+//                   {id: 1, text: "Idiot has no idea"}, 
+//                   {id: 2, text:"Fool!"}, 
+//                   {id: 3, text: "I agree!"}
+//                 ]
+//      },
+//      {
+//       id: 3, 
+//       text: "So glad I found this. Bought four already!",
+//       comments: []
+//      }
+//   ]
   
-  let getPostByID= 2
-  let deleteCommentById=2;
-  let i=0
-  for (const post of posts) {
+//   let getPostByID= 2
+//   let deleteCommentById=2;
+//   let i=0
+//   for (const post of posts) {
 
-    if (post.id == getPostByID){
-            let j=0
-       for (const comment of post.comments) {
-           if (comment.id == deleteCommentById) {
+//     if (post.id == getPostByID){
+//             let j=0
+//        for (const comment of post.comments) {
+//            if (comment.id == deleteCommentById) {
 
-            post.comments.splice(j,1);
+//             post.comments.splice(j,1);
                
-           }
-           j++;
-       }
-    }
+//            }
+//            j++;
+//        }
+//     }
       
 
-    i++;
+//     i++;
+//   }
+
+//   console.log(posts);
+
+
+// Extension
+
+
+const dictionary = {
+    "A": ["Aardvark", "Abacus", "Actually", "Atomic"],
+    "B": ["Banana", "Bonkers", "Brain", "Bump"],
+    "C": ["Callous", "Chain", "Coil", "Czech"]
   }
 
-  console.log(posts);
+  const dictKeys=Object.keys(dictionary);
+  
+  for (let i = 0; i < dictKeys.length; i++) {
+      console.log("Words that begin with " + dictKeys[i]+":");
+      for (const word of dictionary[dictKeys[i]]) {
+          console.log(word);
+          
+      }
+      
+  }
+
+  
