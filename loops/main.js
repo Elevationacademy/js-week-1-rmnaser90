@@ -55,20 +55,44 @@
 //     }
 // }
 
-// Exercise 7 & 8
+// // Exercise 7 & 8
 
-const names = ["Ashley", "Donovan", "Lucas"]
-const ages = [23, 47, 18]
-const people = []
+// const names = ["Ashley", "Donovan", "Lucas"]
+// const ages = [23, 47, 18]
+// const people = []
 
 
-for (let i = 0; i < names.length; i++) {
-   people.push({name: names[i], age:ages[i]})
+// for (let i = 0; i < names.length; i++) {
+//    people.push({name: names[i], age:ages[i]})
     
-}
+// }
 
-console.log(people);
+// console.log(people);
 
-for (let person of people) {
-    console.log(person.name+" is "+person.age+" years old.");
-}
+// for (let person of people) {
+//     console.log(person.name+" is "+person.age+" years old.");
+// }
+
+// Exercise 9
+
+const posts = [
+    {id: 165234, text: "Love this product"},
+    {id: 2762834, text: "This is the worst. DON'T BUY!"},
+    {id: 3982349, text: "So glad I found this. Bought four already!"}
+  ]
+console.log(posts);
+
+  let deletePostByID=prompt('eneter the Id of post to deleted')
+  let i=0
+  for (const post of posts) {
+
+    if (post.id == deletePostByID){
+
+        posts.splice(i,1);
+    }
+      
+
+    i++;
+  }
+
+  console.log(posts);
