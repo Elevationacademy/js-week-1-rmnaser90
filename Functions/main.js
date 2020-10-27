@@ -84,16 +84,33 @@
 // console.log( checkExists(stack,needle) );
 
 
-// Exercise 6
-const calculator={
-    add: function(x,y){ return x+y},
-    subtract: function(x,y){return x - y}
+// // Exercise 6
+// const calculator={
+//     add: function(x,y){ return x+y},
+//     subtract: function(x,y){return x - y}
+// }
+
+
+
+
+// const result1 = calculator.add(20, 1)
+// const result2 = calculator.subtract(30, 9)
+
+// console.log(calculator.add(result1, result2)) //should print 42
+
+
+// Exercise 7
+
+const increaseByNameLength =function(Money,Name){ return Money*Name.length}
+const makeRegal = function(Name){return "His Royal Highness, "+Name}
+
+
+const turnToKing = function(name, money){
+    name = name.toUpperCase()
+    money = increaseByNameLength(money, name)
+    name = makeRegal(name)
+
+    console.log(name + " has " + money + " gold coins")
 }
 
-
-
-
-const result1 = calculator.add(20, 1)
-const result2 = calculator.subtract(30, 9)
-
-console.log(calculator.add(result1, result2)) //should print 42
+turnToKing("martin luther", 100) // should print "His Royal Highness, MARTIN LUTHER has 1300 gold coins"
