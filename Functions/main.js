@@ -45,3 +45,20 @@ if (num%2) {
 randomNum = Math.floor(Math.random()*100);
 console.log(randomNum);
 console.log(isEven(randomNum));
+
+
+console.log("Exercise 4 below");
+// Exercise 4
+
+const isEvenInArray = function (arr) {
+    
+    for (const num of arr) {
+        if (!isEven(num)) {
+            console.log(num);
+            
+        }
+    }
+}
+
+let numArr=[3,4,5,8,10,11,6,22,23,71]
+isEvenInArray(numArr)
