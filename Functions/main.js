@@ -63,22 +63,37 @@
 // let numArr=[3,4,5,8,10,11,6,22,23,71]
 // isEvenInArray(numArr)
 
-// Exercise 5
+// // Exercise 5
 
 
-const checkExists=function (arr,num) {
+// const checkExists=function (arr,num) {
 
-    for (const n of arr) {
-        if (n==num) {
-            return true;
-        }else {
-            return false;
-        }
-    }
+//     for (const n of arr) {
+//         if (n==num) {
+//             return true;
+//         }else {
+//             return false;
+//         }
+//     }
     
+// }
+
+// const needle= 7;
+// const stack=[3,4,2,5,1,6,2];
+
+// console.log( checkExists(stack,needle) );
+
+
+// Exercise 6
+const calculator={
+    add: function(x,y){ return x+y},
+    subtract: function(x,y){return x - y}
 }
 
-const needle= 7;
-const stack=[3,4,2,5,1,6,2];
 
-console.log( checkExists(stack,needle) );
+
+
+const result1 = calculator.add(20, 1)
+const result2 = calculator.subtract(30, 9)
+
+console.log(calculator.add(result1, result2)) //should print 42
