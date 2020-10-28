@@ -122,7 +122,7 @@ const splice = function(array, index, count, ...item) {
     let newArr = [];
     let deletedArray = [];
         if (index<0) {
-    index=arr.length+index;
+    index=array.length+index;
      }
     if (count != undefined) {
         for (let i = 0; i < array.length; i++) {
@@ -223,7 +223,7 @@ console.log(deleted); //should be [] 
 // let newArr = [];
 //     let deletedArray = [];
 //     if (index<0) {
-//         index=arr.length+index;
+//         index=array.length+index;
 //     }
 //     if (count != undefined) {
 //         for (let i = 0; i < array.length; i++) {
