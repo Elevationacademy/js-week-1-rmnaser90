@@ -116,108 +116,14 @@
 // turnToKing("martin luther", 100) // should print "His Royal Highness, MARTIN LUTHER has 1300 gold coins"
 
 
-// //  Extension Challenge
-// const splice = function(array, index, count, ...item) {
+//  Extension Challenge
+const splice = function(array, index, count, ...item) {
 
-//     let newArr = [];
-//     let deletedArray = [];
-//     if (count != undefined) {
-//         for (let i = 0; i < array.length; i++) {
-//             if (i == index) {
-//                 for (let j = 0; j < count; j++) {
-//                     deletedArray=[...deletedArray,array[i]]
-//                     i++
-//                 }
-//                 for (let z = 0; item[z]!=undefined; z++) {
-
-//                     newArr=[...newArr,item[z]]
-                    
-//                 }
-               
-
-//             }
-//             newArr=[...newArr,array[i]]
-//         }
-//     } else {
-
-//         for (let i = 0; i < array.length; i++) {
-//             if (i < index) {
-//                 newArr=[...newArr,array[i]]
-//             } else {
-//                 deletedArray=[...newArr,array[i]]
-//             }
-//         }
-//     }
-
-
-//     for (let i = 0; i < newArr.length; i++) {
-//         array[i] = newArr[i];
-//     }
-
-//     array.length=newArr.length;
-    
-   
-//     return deletedArray
-// }
-
-
-
-
-// // remove 1 element
-// let arrr = [1, 2, 3]
-// splice(arrr, 0, 1);
-// console.log(arrr); //should be [2,3]
-
-
-// // add 1 element
-// arr = [1, 2, 3]
-// splice(arr, 0, 0, 0);
-// console.log(arr); //should be [0,1,2,3]
-
-
-// // add 2 elements
-// arr = [1, 2, 3]
-// splice(arr, 0, 0, -1, 0);
-// console.log(arr); //should be [-1,0,1,2,3]
-
-
-// // replace 1 element
-// arr = [1, 2, 3]
-// splice(arr, 1, 1, 55);
-// console.log(arr); //should be [1,55,3] 
-
-
-// // delete all elements from index to end
-// arr = [1, 2, 3, 4, 5]
-// splice(arr, 1);
-// console.log(arr); //should be [1] 
-
-
-// // returns array of deleted elements
-// arrz = [1, 2, 3]
-// let deleted = splice(arrz, 1);
-// console.log(deleted); //should be [2,3] 
-
-
-// // returns an array of the deleted element (1 element)
-// arr = [1, 2, 3]
-// deleted = splice(arr, 1, 1);
-// console.log(deleted); //should be [2] 
-
-
-// // returns an empty array when no elements are deleted
-// arr = [1, 2, 3]
-// deleted = splice(arr, 1, 0, 5);
-// console.log(deleted); //should be [] 
-
-
-
-// overriding the native splice method
-Array.prototype.splicee = function(index, count, ...item){
-    // write your code here  
-let array=this;
-let newArr = [];
+    let newArr = [];
     let deletedArray = [];
+        if (index<0) {
+    index=arr.length+index;
+     }
     if (count != undefined) {
         for (let i = 0; i < array.length; i++) {
             if (i == index) {
@@ -257,43 +163,137 @@ let newArr = [];
     return deletedArray
 }
 
-// remove 1 element
-let arr = [1,2,3]
-arr.splicee(0,1); 
-console.log(arr); //should be [2,3]
 
 
-// add 1 element
-arr = [1,2,3]
-arr.splicee(0,0,0); 
-console.log(arr); //should be [0,1,2,3]
+
+// remove 1 element
+let arr = [1, 2, 3]
+console.log(splice(arr, 0, 1)) // [1]
+console.log(arr); //should be [2,3]
 
 
-// replace 1 element
-arr = [1,2,3]
-arr.splicee(1,1,55); 
-console.log(arr); //should be [1,55,3] 
+// add 1 element
+arr = [1, 2, 3]
+splice(arr, 0, 0, 0);
+console.log(arr); //should be [0,1,2,3]
 
 
-// delete all elements from index to end
-arr = [1,2,3,4,5]
-arr.splicee(1); 
-console.log(arr); //should be [1] 
+// add 2 elements
+arr = [1, 2, 3]
+splice(arr, 0, 0, -1, 0);
+console.log(arr); //should be [-1,0,1,2,3]
 
 
-// returns array of deleted elements
-arr = [1,2,3]
-let deleted = arr.splicee(1); 
-console.log(deleted); //should be [2,3] 
+// replace 1 element
+arr = [1, 2, 3]
+splice(arr, 1, 1, 55);
+console.log(arr); //should be [1,55,3] 
 
 
-// returns an array of the deleted element (1 element)
-arr = [1,2,3]
-deleted = arr.splicee(1,1); 
-console.log(deleted); //should be [2] 
+// delete all elements from index to end
+arr = [1, 2, 3, 4, 5]
+splice(arr, 1);
+console.log(arr); //should be [1] 
 
 
-// returns an empty array when no elements are deleted
-arr = [1,2,3]
-deleted = arr.splicee(1,0,5); 
-console.log(deleted); //should be [] 
+// returns array of deleted elements
+arrz = [1, 2, 3]
+let deleted = splice(arrz, 1);
+console.log(deleted); //should be [2,3] 
+
+
+// returns an array of the deleted element (1 element)
+arr = [1, 2, 3]
+deleted = splice(arr, 1, 1);
+console.log(deleted); //should be [2] 
+
+
+// returns an empty array when no elements are deleted
+arr = [1, 2, 3]
+deleted = splice(arr, 1, 0, 5);
+console.log(deleted); //should be [] 
+
+
+
+// // overriding the native splice method
+// Array.prototype.splicee = function(index, count, ...item){
+//     // write your code here  
+   
+// let array=this;
+// let newArr = [];
+//     let deletedArray = [];
+//     if (index<0) {
+//         index=arr.length+index;
+//     }
+//     if (count != undefined) {
+//         for (let i = 0; i < array.length; i++) {
+//             if (i == index) {
+//                 for (let j = 0; j < count; j++) {
+//                     deletedArray=[...deletedArray,array[i]]
+//                     i++
+//                 }
+//                 for (let z = 0; item[z]!=undefined; z++) {
+//                     newArr=[...newArr,item[z]]
+//                 }
+//             }
+//             newArr=[...newArr,array[i]]
+//         }
+//     } else {
+//         for (let i = 0; i < array.length; i++) {
+//             if (i < index) {
+//                 newArr=[...newArr,array[i]]
+//             } else {
+//                 deletedArray=[...newArr,array[i]]
+//             }
+//         }
+//     }
+//     for (let i = 0; i < newArr.length; i++) {
+//         array[i] = newArr[i];
+//     }
+//     array.length=newArr.length;
+//     return deletedArray
+// }
+
+// // remove 1 element
+// let arr = [1,2,3]
+// arr.splicee(-2,1); 
+// console.log(arr); //should be [2,3]
+
+
+// // add 1 element
+// arr = [1,2,3]
+// arr.splicee(0,0,0); 
+// console.log(arr); //should be [0,1,2,3]
+
+
+// // replace 1 element
+// arr = [1,2,3]
+// arr.splicee(1,1,55); 
+// console.log(arr); //should be [1,55,3] 
+
+
+// // delete all elements from index to end
+// arr = [1,2,3,4,5]
+// arr.splicee(1); 
+// console.log(arr); //should be [1] 
+
+
+// // returns array of deleted elements
+// arr = [1,2,3]
+// let deleted = arr.splicee(1); 
+// console.log(deleted); //should be [2,3] 
+
+
+// // returns an array of the deleted element (1 element)
+// arr = [1,2,3]
+// deleted = arr.splicee(1,1); 
+// console.log(deleted); //should be [2] 
+
+
+// // returns an empty array when no elements are deleted
+// arr = [1,2,3]
+// deleted = arr.splicee(1,0,5); 
+// console.log(deleted); //should be [] 
+
+
+
