@@ -154,16 +154,56 @@
 //   coffeeShop.makeDrink("frenchPress"); //should alert/console "Sorry, we're all out of beans"
   
 
-// Exercise 6.1 Challenge
+// // Exercise 6.1 Challenge
+
+// const coffeeShop = {
+//     beans: 40,
+  
+//     drinkRequirements: {
+//       latte: 10,
+//       americano: 5,
+//       doubleShot: 15,
+//       frenchPress: 12
+//     },
+  
+//     makeDrink: function (drinkType) {
+//       // TODO: Finish this method
+//         if(this.drinkRequirements[drinkType]==undefined){
+//             alert("Sorry, we don't make filtered")
+//             return
+//         }
+//         if(this.beans<this.drinkRequirements[drinkType]){
+//                  alert("Sorry, we're all out of beans");
+//                 }else{
+//                 alert("Enjoy your "+ drinkType)
+//                 this.beans-=this.drinkRequirements[drinkType]
+//               }
+        
+
+//     }
+//   }
+  
+//   coffeeShop.makeDrink("latte"); 
+//   coffeeShop.makeDrink("americano");
+//   coffeeShop.makeDrink("filtered"); //should alert/console "Sorry, we don't make filtered"
+//   coffeeShop.makeDrink("doubleShot");
+//   coffeeShop.makeDrink("frenchPress"); //should alert/console "Sorry, we're all out of beans"
+  
+
+
+
+
+
+// Extension 1 & 2 Challenge
 
 const coffeeShop = {
     beans: 40,
-  
+    money: 0,
     drinkRequirements: {
-      latte: 10,
-      americano: 5,
-      doubleShot: 15,
-      frenchPress: 12
+      latte: {beanReq:10, price: 5},
+      americano: {beanReq:5, price: 2.5},
+      doubleShot: {beanReq:15, price: 7.5},
+      frenchPress: {beanReq:12, price: 6}
     },
   
     makeDrink: function (drinkType) {
@@ -172,15 +212,31 @@ const coffeeShop = {
             alert("Sorry, we don't make filtered")
             return
         }
-        if(this.beans<this.drinkRequirements[drinkType]){
-                 alert("Sorry, we're all out of beans");
+        if(this.beans<this.drinkRequirements[drinkType].beanReq){
+                 if(this.buyBeans(this.drinkRequirements[drinkType].beanReq)){ this.makeDrink(drinkType) }
+                 
                 }else{
                 alert("Enjoy your "+ drinkType)
-                this.beans-=this.drinkRequirements[drinkType]
+                this.beans-=this.drinkRequirements[drinkType].beanReq
+                this.money+=this.drinkRequirements[drinkType].price
               }
         
 
-    }
+    },
+
+    buyBeans: function(amount){ // 1 bean costs 0.5 money
+        if (this.money>=(amount * 0.5)) {
+            this.beans+= amount
+            this.money-= amount * 0.5
+            return true
+        }else{
+            alert("sorry! we don't have enough money to buy "+amount+" beans")
+            return false
+        }
+
+
+}
+
   }
   
   coffeeShop.makeDrink("latte"); 
@@ -189,3 +245,4 @@ const coffeeShop = {
   coffeeShop.makeDrink("doubleShot");
   coffeeShop.makeDrink("frenchPress"); //should alert/console "Sorry, we're all out of beans"
   
+  console.log( coffeeShop);
