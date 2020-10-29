@@ -69,27 +69,52 @@
 //   console.log('Take off! ' + airplane.fly());
   
 
-// Exercise 4
+// // Exercise 4
 
 
-const tipJar = {
-    coinCount: 20,
-    tip: function () {
-      this.coinCount += 1;
-    },
-    stealCoins: function(coin){
+// const tipJar = {
+//     coinCount: 20,
+//     tip: function () {
+//       this.coinCount += 1;
+//     },
+//     stealCoins: function(coin){
 
-this.coinCount-=coin;
+// this.coinCount-=coin;
 
-    }
+//     }
+//   };
+  
+//   tipJar.tip();
+//   console.log('Tip jar should have 21 coins: ' + tipJar.coinCount);
+  
+//   tipJar.stealCoins(3);
+//   console.log('Tip jar should have 18 coins: ' + tipJar.coinCount);
+  
+//   tipJar.stealCoins(10);
+//   console.log('Tip jar should have 8 coins: ' + tipJar.coinCount);
+  
+
+// Exercise 5 (challenge)
+
+const revealSecret = function () {
+    return this.secret;
   };
   
-  tipJar.tip();
-  console.log('Tip jar should have 21 coins: ' + tipJar.coinCount);
+  const shoutIt = function (person, func) {
+    person.revealItAll = func;
+    const result = person.revealItAll();
+    alert(person.name + " said: " +result);
+  };
   
-  tipJar.stealCoins(3);
-  console.log('Tip jar should have 18 coins: ' + tipJar.coinCount);
+  const avi = {
+    name: "Avi",
+    secret: "Im scared of snakes!"
+  };
   
-  tipJar.stealCoins(10);
-  console.log('Tip jar should have 8 coins: ' + tipJar.coinCount);
+  const narkis = {
+    name: "Narkis",
+    secret: "I dont have secrets because I'm zen like that."
+  };
   
+  shoutIt(avi, revealSecret);
+  shoutIt(narkis, revealSecret);
