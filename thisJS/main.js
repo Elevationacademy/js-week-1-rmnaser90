@@ -42,29 +42,54 @@
   
 
 
-// Exercise 3
+// // Exercise 3
 
-const pumpFuel = function (plane) {
-    plane.fuel += 1;
-  };
+// const pumpFuel = function (plane) {
+//     plane.fuel += 1;
+//   };
   
-  const airplane = {
-      fuel:0,
-    fly: function () {
-      if (this.fuel < 2) {
-        return 'on the ground!';
-      }
-      else {
-        return 'flying!';
-      }
+//   const airplane = {
+//       fuel:0,
+//     fly: function () {
+//       if (this.fuel < 2) {
+//         return 'on the ground!';
+//       }
+//       else {
+//         return 'flying!';
+//       }
+//     }
+//   };
+  
+//   console.log('The plane should not be able to fly (yet): ' + airplane.fly());
+  
+//   pumpFuel(airplane);
+//   console.log('The plane should STILL not be able to fly: ' + airplane.fly());
+  
+//   pumpFuel(airplane);
+//   console.log('Take off! ' + airplane.fly());
+  
+
+// Exercise 4
+
+
+const tipJar = {
+    coinCount: 20,
+    tip: function () {
+      this.coinCount += 1;
+    },
+    stealCoins: function(coin){
+
+this.coinCount-=coin;
+
     }
   };
   
-  console.log('The plane should not be able to fly (yet): ' + airplane.fly());
+  tipJar.tip();
+  console.log('Tip jar should have 21 coins: ' + tipJar.coinCount);
   
-  pumpFuel(airplane);
-  console.log('The plane should STILL not be able to fly: ' + airplane.fly());
+  tipJar.stealCoins(3);
+  console.log('Tip jar should have 18 coins: ' + tipJar.coinCount);
   
-  pumpFuel(airplane);
-  console.log('Take off! ' + airplane.fly());
+  tipJar.stealCoins(10);
+  console.log('Tip jar should have 8 coins: ' + tipJar.coinCount);
   
