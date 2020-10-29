@@ -119,7 +119,43 @@
 //   shoutIt(avi, revealSecret);
 //   shoutIt(narkis, revealSecret);
 
-// Exercise 6 Challenge
+// // Exercise 6 Challenge
+
+// const coffeeShop = {
+//     beans: 40,
+  
+//     drinkRequirements: {
+//       latte: 10,
+//       americano: 5,
+//       doubleShot: 15,
+//       frenchPress: 12
+//     },
+  
+//     makeDrink: function (drinkType) {
+//       // TODO: Finish this method
+//         if(this.drinkRequirements[drinkType]==undefined){
+//             alert("Sorry, we don't make filtered")
+//         }else{
+//             if(this.beans<this.drinkRequirements[drinkType]){
+//                 alert("Sorry, we're all out of beans");
+//             }else{
+//                 alert("Enjoy your "+ drinkType)
+//                 this.beans-=this.drinkRequirements[drinkType]
+//             }
+//         }
+
+//     }
+//   }
+  
+//   coffeeShop.makeDrink("latte"); 
+//   coffeeShop.makeDrink("americano");
+//   coffeeShop.makeDrink("filtered"); //should alert/console "Sorry, we don't make filtered"
+//   coffeeShop.makeDrink("doubleShot");
+//   coffeeShop.makeDrink("frenchPress"); //should alert/console "Sorry, we're all out of beans"
+  
+
+
+// Exercise 6.1 Challenge
 
 const coffeeShop = {
     beans: 40,
@@ -135,14 +171,16 @@ const coffeeShop = {
       // TODO: Finish this method
         if(this.drinkRequirements[drinkType]==undefined){
             alert("Sorry, we don't make filtered")
-        }else{
-            if(this.beans<this.drinkRequirements[drinkType]){
-                alert("Sorry, we're all out of beans");
-            }else{
+            return
+        }
+
+        if(this.beans<this.drinkRequirements[drinkType]){
+                 alert("Sorry, we're all out of beans");
+                }else{
                 alert("Enjoy your "+ drinkType)
                 this.beans-=this.drinkRequirements[drinkType]
-            }
-        }
+              }
+        
 
     }
   }
