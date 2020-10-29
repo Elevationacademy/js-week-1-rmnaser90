@@ -154,7 +154,6 @@
 //   coffeeShop.makeDrink("frenchPress"); //should alert/console "Sorry, we're all out of beans"
   
 
-
 // Exercise 6.1 Challenge
 
 const coffeeShop = {
@@ -173,7 +172,6 @@ const coffeeShop = {
             alert("Sorry, we don't make filtered")
             return
         }
-
         if(this.beans<this.drinkRequirements[drinkType]){
                  alert("Sorry, we're all out of beans");
                 }else{
